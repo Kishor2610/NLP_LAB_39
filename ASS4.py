@@ -1,0 +1,118 @@
+# Name:Kishor More
+# NLP ASSIGNMENT 4 (a)
+# TITLE: Generating Unigrams,Bigrams and Trigrams in nltk (paragraph).
+
+from nltk.util import ngrams
+
+#Function for generating n_grams
+def n_grams(n):
+    #sample input
+    para='''Built-in exceptions are the exceptions that are available in Java libraries. 
+    These exceptions are suitable to explain certain error situations. 
+    Below is the list of important built-in exceptions in Java. '''
+    grams=ngrams(para.split(),n)
+
+    for i in grams:
+        print(i)
+
+#input for each n-gram
+print("Unigrams:")
+n_grams(1)
+print("\nBigrams:")
+n_grams(2)
+print("\nTrigrams:")
+n_grams(3)
+
+#OUTPUT:
+# Unigrams:
+# ('Built-in',)
+# ('exceptions',)
+# ('are',)
+# ('the',)
+# ('exceptions',)
+# ('that',)
+# ('are',)
+# ('available',)
+# ('in',)
+# ('Java',)
+# ('libraries.',)
+# ('These',)
+# ('exceptions',)
+# ('are',)
+# ('suitable',)
+# ('to',)
+# ('explain',)
+# ('certain',)
+# ('error',)
+# ('situations.',)
+# ('Below',)
+# ('is',)
+# ('the',)
+# ('list',)
+# ('of',)
+# ('important',)
+# ('built-in',)
+# ('exceptions',)
+# ('in',)
+# ('Java.',)
+
+# Bigrams:
+# ('Built-in', 'exceptions')
+# ('exceptions', 'are')
+# ('are', 'the')
+# ('the', 'exceptions')
+# ('exceptions', 'that')
+# ('that', 'are')
+# ('are', 'available')
+# ('available', 'in')
+# ('in', 'Java')
+# ('Java', 'libraries.')
+# ('libraries.', 'These')
+# ('These', 'exceptions')
+# ('exceptions', 'are')
+# ('are', 'suitable')
+# ('suitable', 'to')
+# ('to', 'explain')
+# ('explain', 'certain')
+# ('certain', 'error')
+# ('error', 'situations.')
+# ('situations.', 'Below')
+# ('Below', 'is')
+# ('is', 'the')
+# ('the', 'list')
+# ('list', 'of')
+# ('of', 'important')
+# ('important', 'built-in')
+# ('built-in', 'exceptions')
+# ('exceptions', 'in')
+# ('in', 'Java.')
+
+# Trigrams:
+# ('Built-in', 'exceptions', 'are')
+# ('exceptions', 'are', 'the')
+# ('are', 'the', 'exceptions')
+# ('the', 'exceptions', 'that')
+# ('exceptions', 'that', 'are')
+# ('that', 'are', 'available')
+# ('are', 'available', 'in')
+# ('available', 'in', 'Java')
+# ('in', 'Java', 'libraries.')
+# ('Java', 'libraries.', 'These')
+# ('libraries.', 'These', 'exceptions')
+# ('These', 'exceptions', 'are')
+# ('exceptions', 'are', 'suitable')
+# ('are', 'suitable', 'to')
+# ('suitable', 'to', 'explain')
+# ('to', 'explain', 'certain')
+# ('explain', 'certain', 'error')
+# ('certain', 'error', 'situations.')
+# ('error', 'situations.', 'Below')
+# ('situations.', 'Below', 'is')
+# ('Below', 'is', 'the')
+# ('is', 'the', 'list')
+# ('the', 'list', 'of')
+# ('list', 'of', 'important')
+# ('of', 'important', 'built-in')
+# ('important', 'built-in', 'exceptions')
+# ('built-in', 'exceptions', 'in')
+# ('exceptions', 'in', 'Java.')
